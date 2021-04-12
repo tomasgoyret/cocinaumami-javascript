@@ -1,0 +1,33 @@
+
+.header_logo{
+    img{
+        display: block;
+        margin: auto;
+    }
+}
+section h2{
+    font-family: $fuente-umami;
+    text-align: center;
+    font-size: 50px;
+}
+.container-md{
+    color: $color-primario;
+    font-family: $fuente-umami;
+    a{
+        font-family: $fuente-texto;
+        color: $color-primario !important;
+        transition: 2s;
+    }
+    a:hover{
+        background-color: rgb(20, 1, 61);
+        color: white !important;
+        padding: 12px;
+    }
+    .navbar-brand_inscribete{
+    font-size: 27px;
+    background-color: $color-primario;
+    color: white !important;
+    padding: 10px 10px 10px 10px;
+    }
+
+}

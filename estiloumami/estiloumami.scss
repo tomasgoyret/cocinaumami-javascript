@@ -1,0 +1,75 @@
+$color-primario: rgb(20, 1, 61);
+$fuente-umami: 'Dancing Script', cursive;
+$fuente-texto:'Oswald', sans-serif;
+
+html{
+    scroll-behavior: smooth;
+}
+@import "_header";
+@import "estilo_inscripcion";
+
+.encabezado{
+    h2{
+        padding: 90px;
+        font-size: 100px;
+    }
+    h3{
+        font-family: $fuente-texto;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+.fotos{
+    .carousel-inner img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-control-prev-icon,.carousel-control-next-icon{
+        background-color:rgb(20, 1, 61);
+        padding: 20px;
+    }
+    .carousel-caption--tarta{
+        background-color: rgba(165, 165, 0, 0.76);
+    }
+    .carousel-caption--cheescake{
+        background-color: rgba(175, 8, 8, 0.747);
+    }
+    .carousel-caption--tortilla{
+        background-color: rgba(128, 98, 3, 0.678);
+    }
+}
+.queEsCocinaUmami_titulo{
+    font-family: $fuente-umami;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 70px;
+}
+.queEsCocinaUmami_parrafo{
+    font-family: $fuente-texto;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px;
+}
+.profesor_grid{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+.profesor_parrafo{
+    font-family: $fuente-texto;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.profesor_imagen{
+    padding: 50px 50px 50px 50px;
+}
+.profesor--cocinaUmami{
+    font-family: $fuente-umami;
+    display: inline;
+    font-size: 42px;
+}
+
+@import "_footer";
