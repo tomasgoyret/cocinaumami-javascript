@@ -4,6 +4,8 @@ $fuente-texto:'Oswald', sans-serif;
 
 html{
     scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
 }
 @import "_header";
 @import "estilo_inscripcion";
@@ -46,6 +48,7 @@ html{
     font-size: 50px;
     text-align: center;
     padding-top: 70px;
+    
 }
 .queEsCocinaUmami_parrafo{
     font-family: $fuente-texto;
