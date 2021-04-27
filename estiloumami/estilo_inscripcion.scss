@@ -1,9 +1,13 @@
 main{
     background-color: wheat;
+    margin: auto;
+    padding: auto;
 }
 .btn{
-    margin: 100px !important;
     background-color: $color-primario !important;
+}
+.btn-primary{
+    border-color: white !important;
 }
 form{
     padding-top: 50px;

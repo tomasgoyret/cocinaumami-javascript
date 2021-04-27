@@ -4,8 +4,8 @@ $fuente-texto:'Oswald', sans-serif;
 
 html{
     scroll-behavior: smooth;
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+    padding: auto;
 }
 @import "_header";
 @import "estilo_inscripcion";
@@ -21,6 +21,34 @@ html{
         padding-left: 100px;
         padding-right: 100px;
     }
+}
+
+@media(max-width: 576px) {
+    .titulo {
+        font-size: 38px !important;
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
+    }
+    .subtitulo{
+        font-size: 20px !important;
+        padding: 0px 20px 0px 20px !important;
+    }
+    .blockquote{
+        font-size: 30px !important;
+    }
+
+}
+
+.blockquote {
+    margin: 50px 30px 40px 30px;
+    font-family: $fuente-texto;
+    color: $color-primario;
+    font-size: 48px;
+}
+.blockquote-footer{
+    color: $color-primario;
+    font-family: $fuente-umami;
+    font-size: 40px;
 }
 .fotos{
     .carousel-inner img {
@@ -43,6 +71,10 @@ html{
         background-color: rgba(128, 98, 3, 0.678);
     }
 }
+.queEsCocinaUmami{
+    background-image: url(/media/fondoCu.jpeg) !important;
+}
+
 .queEsCocinaUmami_titulo{
     font-family: $fuente-umami;
     font-size: 50px;

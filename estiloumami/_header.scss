@@ -4,10 +4,6 @@
     display: block;
     margin: auto;
     }
-    .container-md{
-        margin: 0px;
-        padding: 0px;
-    }
 }
 .menu{
     background-color: rgb(20, 1, 61) !important;
@@ -21,6 +17,7 @@ header{
     color: $color-primario;
     font-family: $fuente-umami;
     a{
+        margin: 0px 0px 0px 0px !important;
         padding-left: 50px;
         padding-right: 50px;
         font-family: $fuente-texto;
@@ -30,13 +27,7 @@ header{
     a:hover{
         background-color: white;
         color:rgb(20, 1, 61) !important;
-        padding-right: 55px;
-        padding-left: 55px;
-    }
-}
-@media (max-width:576px){
-    header a{
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 53px;
+        padding-left: 53px;
     }
 }

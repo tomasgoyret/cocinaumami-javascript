@@ -1,18 +1,13 @@
 html {
   scroll-behavior: smooth;
-  margin: 0px;
-  padding: 0px;
+  margin: auto;
+  padding: auto;
 }
 
 .header_logo img {
   padding-top: 30px;
   display: block;
   margin: auto;
-}
-
-.header_logo .container-md {
-  margin: 0px;
-  padding: 0px;
 }
 
 .menu {
@@ -31,6 +26,7 @@ header {
 }
 
 header a {
+  margin: 0px 0px 0px 0px !important;
   padding-left: 50px;
   padding-right: 50px;
   font-family: "Oswald", sans-serif;
@@ -42,24 +38,22 @@ header a {
 header a:hover {
   background-color: white;
   color: #14013d !important;
-  padding-right: 55px;
-  padding-left: 55px;
-}
-
-@media (max-width: 576px) {
-  header a {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
+  padding-right: 53px;
+  padding-left: 53px;
 }
 
 main {
   background-color: wheat;
+  margin: auto;
+  padding: auto;
 }
 
 .btn {
-  margin: 100px !important;
   background-color: #14013d !important;
+}
+
+.btn-primary {
+  border-color: white !important;
 }
 
 form {
@@ -79,6 +73,34 @@ form {
   text-align: center;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+@media (max-width: 576px) {
+  .titulo {
+    font-size: 38px !important;
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+  }
+  .subtitulo {
+    font-size: 20px !important;
+    padding: 0px 20px 0px 20px !important;
+  }
+  .blockquote {
+    font-size: 30px !important;
+  }
+}
+
+.blockquote {
+  margin: 50px 30px 40px 30px;
+  font-family: "Oswald", sans-serif;
+  color: #14013d;
+  font-size: 48px;
+}
+
+.blockquote-footer {
+  color: #14013d;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
 }
 
 .fotos .carousel-inner img {
@@ -103,6 +125,10 @@ form {
 
 .fotos .carousel-caption--tortilla {
   background-color: rgba(128, 98, 3, 0.678);
+}
+
+.queEsCocinaUmami {
+  background-image: url(/media/fondoCu.jpeg) !important;
 }
 
 .queEsCocinaUmami_titulo {
