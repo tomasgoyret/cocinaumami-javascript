@@ -7,15 +7,19 @@
 }
 .menu{
     background-color: rgb(20, 1, 61) !important;
+    margin: 0px !important;
 }
 section h2{
     font-family: $fuente-umami;
     text-align: center;
-    font-size: 50px;
 }
 header{
     color: $color-primario;
     font-family: $fuente-umami;
+    margin: 0px !important;
+    .row{
+        margin: 0px;
+    }
     a{
         margin: 0px 0px 0px 0px !important;
         padding-left: 50px;
