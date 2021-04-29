@@ -155,9 +155,10 @@ form {
 }
 
 footer {
+  margin-top: 100px;
   font-family: "Dancing Script", cursive;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   font-size: 14px;
   background-color: #14013d;
 }
