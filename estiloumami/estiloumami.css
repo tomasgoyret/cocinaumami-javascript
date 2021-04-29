@@ -135,6 +135,10 @@ form {
       grid-template-columns: 4fr 2fr;
 }
 
+.queEsCocinaUmami {
+  color: #14013d;
+}
+
 .parrafo {
   font-family: "Oswald", sans-serif;
   padding-left: 50px;
