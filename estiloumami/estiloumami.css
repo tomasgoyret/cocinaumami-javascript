@@ -90,19 +90,6 @@ form {
   }
 }
 
-.blockquote {
-  margin: 50px 30px 40px 30px;
-  font-family: "Oswald", sans-serif;
-  color: #14013d;
-  font-size: 48px;
-}
-
-.blockquote-footer {
-  color: #14013d;
-  font-family: "Dancing Script", cursive;
-  font-size: 40px;
-}
-
 .fotos .carousel-inner img {
   display: block;
   margin: auto;
@@ -127,22 +114,18 @@ form {
   background-color: rgba(128, 98, 3, 0.678);
 }
 
-.queEsCocinaUmami {
-  background-image: url(/media/fondoCu.jpeg) !important;
-}
-
-.queEsCocinaUmami_titulo {
-  font-family: "Dancing Script", cursive;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 70px;
-}
-
-.queEsCocinaUmami_parrafo {
+.blockquote {
+  margin: 50px 30px 40px 30px;
   font-family: "Oswald", sans-serif;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 50px;
+  color: #14013d;
+  font-size: 48px;
+}
+
+.blockquote-footer {
+  color: #14013d;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin-bottom: 100px;
 }
 
 .profesor_grid {
@@ -152,10 +135,13 @@ form {
       grid-template-columns: 4fr 2fr;
 }
 
-.profesor_parrafo {
+.parrafo {
   font-family: "Oswald", sans-serif;
   padding-left: 50px;
   padding-top: 50px;
+  font-size: 38px;
+  line-height: 2;
+  word-spacing: 10px;
 }
 
 .profesor_imagen {
@@ -189,9 +175,13 @@ footer h2 {
   color: white;
 }
 
-footer h2 img {
+footer h2 .logoFooter {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+footer h2 .wasap {
+  padding-bottom: 9px;
 }
 
 footer h3 {

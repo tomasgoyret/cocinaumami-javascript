@@ -10,6 +10,8 @@ html{
 @import "_header";
 @import "estilo_inscripcion";
 
+//encabezados para todos los html//
+
 .encabezado{
     h2{
         padding: 90px;
@@ -39,17 +41,7 @@ html{
 
 }
 
-.blockquote {
-    margin: 50px 30px 40px 30px;
-    font-family: $fuente-texto;
-    color: $color-primario;
-    font-size: 48px;
-}
-.blockquote-footer{
-    color: $color-primario;
-    font-family: $fuente-umami;
-    font-size: 40px;
-}
+// carrousel de fotos//
 .fotos{
     .carousel-inner img {
         display: block;
@@ -71,31 +63,34 @@ html{
         background-color: rgba(128, 98, 3, 0.678);
     }
 }
-.queEsCocinaUmami{
-    background-image: url(/media/fondoCu.jpeg) !important;
-}
-
-.queEsCocinaUmami_titulo{
-    font-family: $fuente-umami;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 70px;
-    
-}
-.queEsCocinaUmami_parrafo{
+//frase//
+.blockquote {
+    margin: 50px 30px 40px 30px;
     font-family: $fuente-texto;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 50px;
+    color: $color-primario;
+    font-size: 48px;
+}
+.blockquote-footer{
+    color: $color-primario;
+    font-family: $fuente-umami;
+    font-size: 40px;
+    margin-bottom: 100px;
 }
 .profesor_grid{
     display: grid;
     grid-template-columns: 4fr 2fr;
 }
-.profesor_parrafo{
+
+// que es cocina umami del Inicio//
+
+
+.parrafo{
     font-family: $fuente-texto;
     padding-left: 50px;
     padding-top: 50px;
+    font-size: 38px;
+	line-height: 2;
+	word-spacing: 10px;
 }
 
 .profesor_imagen{
