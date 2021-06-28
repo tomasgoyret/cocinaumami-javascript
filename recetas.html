@@ -10,15 +10,15 @@
     <link rel="icon" type="image/png" href="media/logo.png" sizes="64x64">
     <link rel="stylesheet" href="estiloumami/estiloumami.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="estiloumami/estiloumami.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <header>
         <div class="row justify-content-center">
             <h1 class="header_logo"><img src="media/logo.png" alt="logo">
@@ -45,37 +45,37 @@
           </figure>    
     <div class="row row-cols-1 row-cols-md-2 g-4">
       <div class="col">
-        <div class="card">
+        <div class="card" id="cheescake">
           <img src="media/Recetas/Cheescake.jpeg" class="card-img-top" alt="cheescake">
           <div class="card-body">
-            <h5 class="card-title">Cheescake</h5>
+            <h5 class="card-title nombre_receta">Cheescake</h5>
             <p class="card-text">Frutos Rojos, Frutilla, Maracuyá. Se hace agua la boca cuando se trata de esta tarta</p>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card" id="marquesa">
           <img src="media/Recetas/marquesa.jpeg" class="card-img-top" alt="marquesa">
           <div class="card-body">
-            <h5 class="card-title">Marquesa de chocolate</h5>
+            <h5 class="card-title nombre_receta">Marquesa de chocolate</h5>
             <p class="card-text">Sencillo pero no por eso menos rico. Galletitas, chocolate, dulce de leche, merenguitos. La suma de todo lo rico!.</p>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card" id="flan">
           <img src="media/Recetas/Flan.jpeg" class="card-img-top" alt="lasagna">
           <div class="card-body">
-            <h5 class="card-title">Flan</h5>
+            <h5 class="card-title nombre_receta">Flan</h5>
             <p class="card-text">Hay que poner muucho huevo! También leche y un ingrediente especial que lo hace muuuy cremoso!.</p>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card" id="chipa">
           <img src="media/Recetas/Chipa.jpeg" class="card-img-top" alt="chipa">
           <div class="card-body">
-            <h5 class="card-title">Chipá</h5>
+            <h5 class="card-title nombre_receta">Chipá</h5>
             <p class="card-text">El pan de queso mas conocido del mundo, para acompañar el mate!</p>
           </div>
         </div>
@@ -83,44 +83,59 @@
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-          <div class="card">
+          <div class="card" id="pasta">
             <img src="media/Recetas/Pasta.jpeg" class="card-img-top" alt="pasta">
             <div class="card-body">
-              <h5 class="card-title">Pasta</h5>
+              <h5 class="card-title nombre_receta">Pasta</h5>
               <p class="card-text">La mejor pasta casera de calabaza y nuez, cuatro quesos o jamón y queso.</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card" id="risotto">
             <img src="media/Recetas/Risoto.jpeg" class="card-img-top" alt="risot">
             <div class="card-body">
-              <h5 class="card-title">Risotto de pollo</h5>
+              <h5 class="card-title nombre_receta">Risotto de pollo</h5>
               <p class="card-text">Arroz con pollo en una salsa tremenda. Para chuparse los dedos.</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card" id="lasagna">
             <img src="media/Recetas/Lasagna.jpeg" class="card-img-top" alt="lasagna">
             <div class="card-body">
-              <h5 class="card-title">Lasagna</h5>
+              <h5 class="card-title nombre_receta">Lasagna</h5>
               <p class="card-text">Ricotta, espinaca, carne, queso, salsa de tomate. Tremenda lasagna</p>
             </div>
           </div>
+          <!-- Acá íria el boton que quiero agregar
+          pero en todos los casos-->
         </div>
-        <div class="col">
-          <div class="card">
+        <div class="col" id="recetaReebs">
+          <div class="card" id="reebs">
             <img src="media/Recetas/Reebs.jpeg" class="card-img-top" alt="reebs">
             <div class="card-body">
-              <h5 class="card-title">Reebs a la barbacoa</h5>
+              <h5 class="card-title nombre_receta">Reebs a la barbacoa</h5>
               <p class="card-text">Costilla de cerdo con salsa barbacoa acompañada de lechuga a la oliva y un puré con nuez moscada.</p>
             </div>
           </div>
         </div>
       </div>
-    <h3 class="subtitulo sub_recetas"> Muchas recetas más...</h3>  
+    <h3 class="subtitulo sub_recetas"> Muchas recetas más...</h3> 
+    
+    <div class="overlay" id="overlay"> 
+      <div class="popup" id="popup">
+          <button class="cerrar" id="cerrar">X</button>
+           <h3> Calculá la cantidad de ingredientes que necesitas</h3>
+            <form class="cantidadPersonas">
+                Cocinar para <input type="number" min="0"> personas.
+            </form>
+        <button type='submit' id='botonConEstilo' class='btn btn-primary'>Calcular</button>
+      </div>
+    </div>
     </section>
+
+
     </main>
     <footer>
         <h2>Cocina<img src="media/logo.png" class="rounded-circle logoFooter" alt="logo">Umami</h2>
@@ -128,5 +143,7 @@
             <a href="https://wa.me/5491133463508"><img src="media/logoWasap.png" class="wasap" alt="Wasap"></a>
        </h2>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="receta.js"></script>
 </body>
 </html>
