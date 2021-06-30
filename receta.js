@@ -1,20 +1,20 @@
-
-var abrirPopup = document.getElementById('botonConEstilo');
+//variables que cree para armar el popup
 var overlay = document.getElementById('overlay');
 var popup = document.getElementById("popup");
 var cerrarPopup = document.getElementById("cerrar");
 
-
+//creacion del boton de 'calcular proporciones para cada receta'
 var miRecetario = document.createElement("div");
 miRecetario.innerHTML = "<button id='botonCheescake' class='btn btn-primary'>Calcular proporciones</button>"
 document.getElementById("cheescake").appendChild(miRecetario);
 
+//abrir pop up en cada boton 'calcular recetas'
 document.getElementById("botonCheescake").addEventListener('click', function(){
     overlay.classList.add('active')
     popup.classList.add('active')
 })
 
-
+//lo repito en cada una de las recetas
 var miRecetario = document.createElement("div");
 miRecetario.innerHTML = "<button id='botonMarquesa' class='btn btn-primary'>Calcular proporciones</button>"
 document.getElementById("marquesa").appendChild(miRecetario);
@@ -80,12 +80,13 @@ document.getElementById("botonReebs").addEventListener('click', function(){
     popup.classList.add('active')
 })
 
+//boton cerrar del pop up
 cerrarPopup.addEventListener('click',function(){
     overlay.classList.remove('active')
     popup.classList.remove('active')
 })
 
-
+//objetos con los ingredientes de las recetas, que voy a necesitar para el calculo de las recetas
 class Receta {
     constructor (nombre,ingrediente1,ingrediente2,ingrediente3,ingrediente4){
         this.nombre = nombre,
@@ -105,6 +106,7 @@ const risotto = new Receta ('risotto',['pollo',1,'pechuga'],['arroz',100,'gramos
 const reebs = new Receta ('reebs',['costilla de cerdo', 500,'gramos'],['papa',2,'unidades'],['lechuga',5,'hojas'],['salsa barbacoa', 1 ,'cucharada'])
 
 
+//funcion ejemplo para el calculo de la receta de cheescake
 document.getElementById("botonConEstilo").addEventListener('click',function(){
     var cantPers = document.getElementById('numeroPers').value
     if(cantPers<1){
