@@ -35,6 +35,7 @@
     <main>
     <section class="encabezado">
         <h2 class="titulo">Las recetas</h2>
+        <div id="fraseYboton">
         <figure class="text-center">
           <blockquote class="blockquote">
             <p>Lo único que me gusta más que hablar de comida es comer</p>
@@ -42,7 +43,8 @@
           <figcaption class="blockquote-footer">
             John Walters
           </figcaption>
-          </figure>    
+          </figure>
+        </div>    
     <div class="row row-cols-1 row-cols-md-2 g-4">
       <div class="col">
         <div class="card" id="cheescake">
@@ -126,16 +128,12 @@
     <div class="overlay" id="overlay"> 
       <div class="popup" id="popup">
           <button class="cerrar" id="cerrar">X</button>
-           <h3> Calculá la cantidad de ingredientes que necesitas</h3>
-            <form class="cantidadPersonas">
-                Cocinar para <input class="numeroPers" id="numeroPers" type="number" min="1"> personas.
-            </form>
-        <button type='submit' id='botonConEstilo' class='btn btn-primary'>Calcular</button>
+          <div id="resultadoCantidad">
+            
+          </div>
       </div>
     </div>
     </section>
-
-
     </main>
     <footer>
         <h2>Cocina<img src="media/logo.png" class="rounded-circle logoFooter" alt="logo">Umami</h2>

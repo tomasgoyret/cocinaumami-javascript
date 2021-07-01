@@ -3,82 +3,19 @@ var overlay = document.getElementById('overlay');
 var popup = document.getElementById("popup");
 var cerrarPopup = document.getElementById("cerrar");
 
-//creacion del boton de 'calcular proporciones para cada receta'
+//creacion del div de 'calcular proporciones'
 var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button id='botonCheescake' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("cheescake").appendChild(miRecetario);
+miRecetario.innerHTML = "<h3> Calcula la cantidad de ingredientes que necesitas </h3>  <form class='cantidadPersonas'>Elegi la receta que queres cocinar: <select id='opcionesRecetas'><option value='cheescake' >cheescake</option><option value='marquesa de chocolate'>marquesa de chocolate</option><option value='flan'>flan</option><option value='chipa'>chipa</option><option value='pasta'>pasta</option><option value='risotto'>risotto</option><option value='lasagna'>lasagna</option><option value='reebs'>reebs</option></select><br><br>Cocinar para <input class='numeroPers' id='numeroPers' type='number' min='1'> personas.</form> <button id='botonProporciones' class='btn btn-primary'>Calcular proporciones</button>"
+document.getElementById("fraseYboton").appendChild(miRecetario);
+miRecetario.classList.add('botonProporciones')
 
-//abrir pop up en cada boton 'calcular recetas'
-document.getElementById("botonCheescake").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-//lo repito en cada una de las recetas
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button id='botonMarquesa' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("marquesa").appendChild(miRecetario);
-
-
-document.getElementById("botonMarquesa").addEventListener('click', function(){
+//abrir pop up boton 'calcular proporciones'
+document.getElementById("botonProporciones").addEventListener('click', function(){
     overlay.classList.add('active')
     popup.classList.add('active')
 })
 
 
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button id='botonFlan' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("flan").appendChild(miRecetario);
-
-document.getElementById("botonFlan").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button id='botonChipa' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("chipa").appendChild(miRecetario);
-
-document.getElementById("botonChipa").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button type='submit' id='botonPasta' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("pasta").appendChild(miRecetario);
-
-document.getElementById("botonPasta").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button type='submit' id='botonRisotto' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("risotto").appendChild(miRecetario);
-
-document.getElementById("botonRisotto").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button type='submit' id='botonLasagna' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("lasagna").appendChild(miRecetario);
-
-document.getElementById("botonLasagna").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
-
-var miRecetario = document.createElement("div");
-miRecetario.innerHTML = "<button type='submit' id='botonReebs' class='btn btn-primary'>Calcular proporciones</button>"
-document.getElementById("reebs").appendChild(miRecetario);
-
-document.getElementById("botonReebs").addEventListener('click', function(){
-    overlay.classList.add('active')
-    popup.classList.add('active')
-})
 
 //boton cerrar del pop up
 cerrarPopup.addEventListener('click',function(){
@@ -103,54 +40,23 @@ const flan = new Receta ('flan',['Huevos',1,'unidad'],['leche',50,'mililitros'],
 const chipa = new Receta ('chipa',['Harina',100,'gramos'],['huevo',1,'unidad'],['queso',50,'gramos'],['manteca',50,'gramos'])
 const pasta = new Receta ('pasta',['harina',300,'gramos'],['huevo',1,'unidad'],['espinaca',200,'gramos'],['queso rayado',50,'gramos'])
 const risotto = new Receta ('risotto',['pollo',1,'pechuga'],['arroz',100,'gramos'],['hongos',5,'unidades'],['pimienta',5,'gramos'])
+const lasagna = new Receta ('lasagna',['tapas de lasagna',5,'unidades'],['carne molida',100,'gramos'],['ricota',100,'gramos'])
 const reebs = new Receta ('reebs',['costilla de cerdo', 500,'gramos'],['papa',2,'unidades'],['lechuga',5,'hojas'],['salsa barbacoa', 1 ,'cucharada'])
 
+var recetario = [cheescake,marquesaChoco,flan,chipa,pasta,risotto,lasagna,reebs]
+var cantPers = document.getElementById('numeroPers').value
 
 //funcion ejemplo para el calculo de la receta de cheescake
-document.getElementById("botonConEstilo").addEventListener('click',function(){
-    var cantPers = document.getElementById('numeroPers').value
-    if(cantPers<1){
-        return console.log('Debe ingresar un numero mayor a cero')
-    } else {
-    let cantIngrediente1 = cantPers*cheescake.ingrediente1[1]
-    let cantIngrediente2 = cantPers*cheescake.ingrediente2[1]
-    let cantIngrediente3 = cantPers*cheescake.ingrediente3[1]
-    let cantIngrediente4 = cantPers*cheescake.ingrediente4[1]
-    console.log('Para cocinar '+cheescake.nombre+' para '+cantPers+' personas vas a necesitar '+cantIngrediente1+' '+cheescake.ingrediente1[2]+' de '+cheescake.ingrediente1[0]+
-                ' ,'+ cantIngrediente2+' '+cheescake.ingrediente2[2]+' de '+cheescake.ingrediente2[0]+
-                ' ,'+ cantIngrediente3+' '+cheescake.ingrediente3[2]+' de '+cheescake.ingrediente3[0]+
-                ' y '+ cantIngrediente4+' '+cheescake.ingrediente4[2]+' de '+cheescake.ingrediente4[0]
-                );
-            }
-})
 
-
-// const tarjetas = document.querySelector(".tarjetas")
-// let btn= document.createElement('button');
-//     btn.textContent = "Calcular proporciones";
-//     btn.className = 'botonTarjeta';
-//     tarjetas.appendChild(btn);
-
-
-
-//AYAX con Jquery -- 
-// me sale el siguiente error:
-//recetas.html:1 Access to XMLHttpRequest at 'file:///C:/recetas.json' from origin 'null' has been blocked by CORS policy:
-//Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, chrome-untrusted, https.
-//jquery-3.6.0.js:10109 GET file:///C:/recetas.json net::ERR_FAILED
-//const URLJSON = "/recetas.json";
-
-//$("#botonConEstilo").click(()=>{
-//    $.getJSON(URLJSON,function(respuesta,estado){
-//        if (estado==="success"){
-//            let misDatos = respuesta;
-//            for(const dato of misDatos){
-//                alert("Vas a necesitar "+$(dato.Ingredientes))
-//            }
-//        }
-//    })
-//})
-
-
-
-
+ document.getElementById("botonProporciones").addEventListener('click',function(){
+     if( document.getElementById('numeroPers').value < 1) {
+        document.getElementById("resultadoCantidad").innerHTML = 'El numero de cantidad de personas debe ser mayor a cero.'
+     }else{
+         for(var i = 0 ; i<recetario.length;  i++){
+            if(recetario[i].nombre===document.getElementById("opcionesRecetas").value){
+            var resultado =  ('Para cocinar '+recetario[i].nombre+' para '+document.getElementById('numeroPers').value+ ' personas necesitas: '+ recetario[i].ingrediente1[1]*document.getElementById('numeroPers').value+ ' '+recetario[i].ingrediente1[2]+' de '+recetario[i].ingrediente1[0]+ ' , '+recetario[i].ingrediente2[1]*document.getElementById('numeroPers').value+ ' '+recetario[i].ingrediente2[2]+' de '+recetario[i].ingrediente2[0] +' y '+recetario[i].ingrediente3[1]*document.getElementById('numeroPers').value+ ' '+recetario[i].ingrediente3[2]+' de '+recetario[i].ingrediente3[0] )  
+        }
+     }
+     document.getElementById("resultadoCantidad").innerHTML = resultado
+    }
+ })
