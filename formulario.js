@@ -20,7 +20,7 @@ $("#botonConEstilo").click(function(){
         var respuestaValidacion = 'Para avanzar, por favor, llena todos los datos'
         document.getElementById("resultadoCantidad").innerHTML = respuestaValidacion
     } else {
-        var confirmacion = 'Bienvenido ' + nombre+ ' te enviamos el mail de confirmacion a: '+mail
+        var confirmacion = 'Bienvenido ' + nombre+ ', te enviamos el mail de confirmacion a: '+mail
         document.getElementById("resultadoCantidad").innerHTML = confirmacion
         var nuevoAlumno = new Alumno(nombre,apellido,sexo,cel,mail);
         console.log(nuevoAlumno);
