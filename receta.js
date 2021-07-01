@@ -16,7 +16,6 @@ document.getElementById("botonProporciones").addEventListener('click', function(
 })
 
 
-
 //boton cerrar del pop up
 cerrarPopup.addEventListener('click',function(){
     overlay.classList.remove('active')

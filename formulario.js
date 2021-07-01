@@ -16,24 +16,35 @@ $("#botonConEstilo").click(function(){
     var sexo = document.getElementsByClassName("form-check-input").value;
     var cel = document.getElementById("inputCelular").value;
     var mail = document.getElementById("inputEmail").value;
-    var nuevoAlumno = new Alumno(nombre,apellido,sexo,cel,mail);
-    console.log(nuevoAlumno);
-    //todavía tengo que agregar el caso en que falte agregar datos y no te permita enviar 
-    //el formulario
-    // submit formulario evento
+    if(nombre==="" || apellido==="" || cel==="" || mail ===""){
+        var respuestaValidacion = 'Para avanzar, por favor, llena todos los datos'
+        document.getElementById("resultadoCantidad").innerHTML = respuestaValidacion
+    } else {
+        var confirmacion = 'Bienvenido ' + nombre+ ' te enviamos el mail de confirmacion a: '+mail
+        document.getElementById("resultadoCantidad").innerHTML = confirmacion
+        var nuevoAlumno = new Alumno(nombre,apellido,sexo,cel,mail);
+        console.log(nuevoAlumno);
+        let miFormulario = document.getElementById("formulario");
+        miFormulario.reset();
+    }
+})
 
-    let miFormulario = document.getElementById("formulario");
-    miFormulario.addEventListener("submit",validarFormulario);
+//variables que cree para armar el popup
+var overlay = document.getElementById('overlay');
+var popup = document.getElementById("popup");
+var cerrarPopup = document.getElementById("cerrar");
 
-    function validarFormulario(e){
-    e.preventDefault();
-    console.log("Formulario Enviado")
-    var nombre = document.getElementById("inputNombre").value;
-    var mail = document.getElementById("inputEmail").value;
-    alert("Bienvenido "+nombre+", te enviamos la confirmación de inscripción a la casilla de correo :"+mail)
-    miFormulario.reset();    
-}
+//abrir pop up boton 'Empezar a cocinar'
+document.getElementById("botonConEstilo").addEventListener('click', function(){
+    overlay.classList.add('active')
+    popup.classList.add('active')
+})
 
+
+//boton cerrar del pop up
+cerrarPopup.addEventListener('click',function(){
+    overlay.classList.remove('active')
+    popup.classList.remove('active')
 })
 
 
