@@ -13,7 +13,10 @@ class Alumno {
 $("#botonConEstilo").click(function(){
     var nombre = document.getElementById("inputNombre").value;
     var apellido = document.getElementById("inputApellido").value;
-    var sexo = document.getElementsByClassName("form-check-input").value;
+    var sexo = ""
+    if(document.getElementById("gridRadios1").checked === true){
+        sexo = "Masculino"
+    }else{sexo = "Femenino"};
     var cel = document.getElementById("inputCelular").value;
     var mail = document.getElementById("inputEmail").value;
     if(nombre==="" || apellido==="" || cel==="" || mail ===""){

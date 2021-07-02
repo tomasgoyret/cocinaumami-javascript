@@ -57,5 +57,6 @@ var cantPers = document.getElementById('numeroPers').value
         }
      }
      document.getElementById("resultadoCantidad").innerHTML = resultado
+     document.getElementById('numeroPers').value="";
     }
  })
